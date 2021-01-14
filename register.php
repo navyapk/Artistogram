@@ -86,7 +86,7 @@
 	<div class="form-group row">
 		<label class="col-md-2 col-form-label" for="desc"><b>Profile Photo</b></label>
 		<div class="col-md-6">
-			<input  type="file" id="image" name="image" required disabled>
+			<input  type="file" id="image" name="photo" required disabled>
 		</div>
 	</div>
 	<div class="form-group row">

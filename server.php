@@ -8,6 +8,10 @@ $lname    = "";
 $phno     = "";
 $email    = "";
 $category = "";
+$photo = "";
+$cate = "";
+$address = "";
+$details = "";
 $errors = array(); 
 
 // connect to the database
@@ -24,6 +28,10 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
   $category=mysqli_real_escape_string($db, $_POST['category']);
+  $photo=mysqli_real_escape_string($db, $_POST['photo']);
+  $cate=mysqli_real_escape_string($db, $_POST['cate']);
+  $address=mysqli_real_escape_string($db, $_POST['address']);
+  $details=mysqli_real_escape_string($db, $_POST['details']);
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -57,8 +65,8 @@ if (isset($_POST['reg_user'])) {
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO register (username,fname,lname,phno, email, password, category) 
-  			  VALUES('$username','$fname','$lname','$phno', '$email', '$password_1', '$category')";
+  	$query = "INSERT INTO register (username,fname,lname,phno, email, password, category , photo, cate, address, details) 
+  			  VALUES('$username','$fname','$lname','$phno', '$email', '$password_1', '$category', '$photo', '$cate', '$address', '$details' )";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
