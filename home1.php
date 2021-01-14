@@ -79,9 +79,10 @@ body{
                <a class="navbar-brand" href="#">Artistogram</a>
                <div class="collapse navbar-collapse" id="Navbar">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="./home.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./category.html">Artist</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./home1.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./category1.html">Artist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./events.php">New Event</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about1.html">About</a></li>
                     </ul>
                 </div>            
             </div>

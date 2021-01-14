@@ -4,10 +4,14 @@
 <head>
   <title>Registration</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  body{
+	  padding-top:5%;
+  }
+  </style>
 </head>
 <body>
 <script>      
@@ -23,6 +27,7 @@
   }
 }
 </script>	
+<body class="offset-md-3">
   <form method="post" action="register.php" class="container">
   <div class="header">
   	<h2>Registration</h2>
