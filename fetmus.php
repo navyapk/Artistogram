@@ -32,33 +32,72 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Artist display</title>
+    <style>
+      .nav-item{
+    float: right;
+    }
+    nav{
+    background-color: black;
+    }
+    .row{
+      padding-top: 60px;
+    }
+    html , body{
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(3, 1, 3, 0.979);
+  }
+  
+      </style>
 </head>
 <body >
-<div class="row">
-    <div class="column col-md-3">
-    <div class="card">
-            <img src="images/my photo.jpg"  alt="artist photo" style="width:100%"></a>
-       <div class="container">
-       <table>
-            <tr>
-            <td rowspan = "3"><?php echo $photo ?></td><td colspan='2'><?php echo $address ?></td>
-            </tr>
-            <tr>
-            <td ><?php echo $phno ?></td><td ><?php echo $email ?></td>
-            </tr>
-            <tr>
-            <td colspan='2'><?php echo $cate ?></td>
-            </tr>
-            <tr>
-            <td><h4><b><?php echo $fname." ".$lname ?></b></h4></td><td  colspan='2'><?php echo $details ?></td>
-            </tr>
-        </table>
+<nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               <a class="navbar-brand" href="#">Artistogram</a>
+               <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="./home.php" >Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./category.html">Artist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php?logout='1'">Logout</a></li>
+                    </ul>
+                </div>            
+            </div>
+        </nav>
+        <div class="row offset-md-4">
 
-          
-       </div>
-      </div>
-    </div>
-    </div>   
+<div class="column col-md-6">
+<div class="card">
+        <!-- <img src="images/my photo.jpg"  alt="banner" style="width:100%"></a> -->
+   <div class="container">
+     <center>
+      <h5><b>Name : <?php echo $fname." ".$lname ?></b></h5>
+      <p><b>Phone : </b><a href="<?php echo $phno ?>"><?php echo $phno ?></a></p>
+      <p><b>Email: </b><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></p>
+      <p><b>category :</b> <?php echo $cate ?> </p>
+      <p><b>Details:</b> <?php echo $details ?></p>
+</center>
+   </div>
+  </div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
 </body>
 </html>
   <?php

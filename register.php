@@ -28,7 +28,7 @@
 }
 </script>	
 <body class="offset-md-3">
-  <form method="post" action="register.php" class="container">
+  <form method="post" action="register.php" class="container" enctype="multipart/form-part">
   <div class="header">
   	<h2>Registration</h2>
   </div>
@@ -134,5 +134,22 @@
 	  </p>
 </div>
   </form>
+  <?php 
+	if(isset($_POST['reg_user']))
+	{
+		if(getimagesize(['photo']['tmp_name'])== FALSE)
+		{
+			echo "Please select an image.";
+		}
+		else
+		{
+			$photo= addcslashes($_FILES['photo']['tmp_name']);
+			$name = addcslashes($_FILES['photo']['name']);
+			$photo= file_get_contents($photo);
+			$photo = base64_encode($photo);
+		}
+	}
+
+  ?>
 </body>
 </html>

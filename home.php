@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artist display</title>
+    <title>Event display</title>
     <style>
     .nav-item{
     float: right;
@@ -82,42 +82,33 @@ body{
                         <li class="nav-item active"><a class="nav-link" href="./home.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./category.html">Artist</a></li>
                         <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php?logout='1'">Logout</a></li>
                     </ul>
                 </div>            
             </div>
         </nav>
-<div class="row">
-    <div class="column col-md-3">
+<div class="row offset-md-4">
+
+    <div class="column col-md-6">
     <div class="card">
-            <img src="images/my photo.jpg"  alt="artist photo" style="width:100%"></a>
+            <!-- <img src="images/my photo.jpg"  alt="banner" style="width:100%"></a> -->
        <div class="container">
-       <table>
-            <tr>
-            <td><?php echo $banner ?></td>
-            </tr>
-            <tr>
-            <td><h4><b><?php echo $ename ?></b></h4></td>
-            </tr>
-            <tr>
-            <td><?php echo $date ?></td>
-            </tr>
-            <tr>
-            <td><?php echo $venue ?></td>
-            </tr>
-            <tr>
-            <td><?php echo $time ?></td>
-            </tr>
-            <tr>
-            <td><?php echo $others ?></td>
-            </tr>
-
-        </table>
-
-          
+         <center>
+          <h5><b>Event name : <?php echo $ename ?></b></h5>
+          <p><b>Date : </b><?php echo $date ?></p>
+          <p><b>Venue : </b><?php echo $venue ?></p>
+          <p><b>Time :</b> <?php echo $time ?> </p>
+          <p><b>Details:</b> <?php echo $others ?></p>
+</center>
        </div>
       </div>
     </div>
-    </div>
+</div>
+    
+
+
+
+       
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
 </body>

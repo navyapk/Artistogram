@@ -82,6 +82,7 @@ $query = "INSERT INTO events (banner,ename,date,venue,time,others)
                         <li class="nav-item"><a class="nav-link" href="./category1.html">Artist</a></li>
                         <li class="nav-item active"><a class="nav-link" href="./events.php">New Event</a></li>
                         <li class="nav-item"><a class="nav-link" href="./about1.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php?logout='1'">Logout</a></li>
                     </ul>
                 </div>            
             </div>
